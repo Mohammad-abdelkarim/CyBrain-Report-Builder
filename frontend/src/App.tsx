@@ -206,8 +206,8 @@ function SetupPage({ report, setReport }: any) {
             <select
               style={{ width: "100%", marginTop: 8 }}
               value={m.reportType}
-              onChange={(value: ReportType) => setReportType(value)}
-            >
+              onChange={(e) => setReportType(e.target.value as ReportType)}
+           >
               <option value="">Select…</option>
               <option value="bugbounty">Bug Bounty</option>
               <option value="osint">OSINT</option>
