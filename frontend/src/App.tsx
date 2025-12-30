@@ -147,7 +147,7 @@ export default function App() {
         {page === "targets" && (
           <TargetsPage
             report={report}
-            onAdd={(type: string, value: string) => setReport((r) => addTarget(r, type, value))}
+            onAdd={(type: TargetType, value: string) => setReport((r) => addTarget(r, type, value))}
             onSetPrimary={(id: string) => setReport((r) => setPrimaryTarget(r, id))}
             onRemove={(id: string) => setReport((r) => removeTarget(r, id))}
           />
@@ -206,7 +206,7 @@ function SetupPage({ report, setReport }: any) {
             <select
               style={{ width: "100%", marginTop: 8 }}
               value={m.reportType}
-              onChange={(e) => setReport((r: any) => setReportType(r, e.target.value))}
+              onChange={(value: ReportType) => setReportType(value)}
             >
               <option value="">Select…</option>
               <option value="bugbounty">Bug Bounty</option>
