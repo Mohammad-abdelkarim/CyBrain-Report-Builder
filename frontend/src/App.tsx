@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import "./styles.css";
-import type { Report } from "./types";
+import type { Report, TargetType, ReportType } from "./types";
 import { health, computeSummary, exportPdf } from "./api";
 import {
   initialReport,
