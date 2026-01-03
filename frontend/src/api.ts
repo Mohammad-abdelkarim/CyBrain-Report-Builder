@@ -1,6 +1,6 @@
 import type { Report } from "./types";
 
-const API_BASE = import.meta.env.VITE_API_BASE;
+const API_BASE = (import.meta.env.VITE_API_URL || "/api").replace(/\/$/, "");
 
 export async function health() {
   const res = await fetch(`${API_BASE}/health`);
